@@ -1,0 +1,69 @@
+10:50:28 **** Incremental Build of configuration Debug for project lab2.1 ****
+/Applications/ModusToolbox/tools_2.4/modus-shell/bin/make CY_MAKE_IDE=eclipse CY_MAKE_IDE_VERSION=2.4 CY_IDE_TOOLS_DIR=/Applications/ModusToolbox/tools_2.4 -j7 all 
+Tools Directory: /Applications/ModusToolbox/tools_2.4
+CY8CPROTO-063-BLE.mk: ./libs/TARGET_CY8CPROTO-063-BLE/CY8CPROTO-063-BLE.mk
+Log file= "/private/var/folders/1l/p85xtmg15clcrj5m1s3m5myr0000gn/T/device-configurator-cli/device-configurator-cli-20221014.105028.702-23837.log"
+Command line= "/Applications/ModusToolbox/tools_2.4/device-configurator/device-configurator.app/Contents/MacOS/device-configurator-cli --library ../mtb_shared/mtb-pdl-cat1/release-v2.4.1/devicesupport.xml --build ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/design.modus --check-mcu=CYBLE-416045-02 --check-coprocessors= --readonly --skip-build"
+
+Prebuild operations complete
+Commencing build operations...
+
+Tools Directory: /Applications/ModusToolbox/tools_2.4
+CY8CPROTO-063-BLE.mk: ./libs/TARGET_CY8CPROTO-063-BLE/CY8CPROTO-063-BLE.mk
+
+Initializing build: mtb-example-psoc6-empty-app Debug CY8CPROTO-063-BLE GCC_ARM
+
+Auto-discovery in progress...
+-> Found 205 .c file(s)
+-> Found 46 .S file(s)
+-> Found 22 .s file(s)
+-> Found 0 .cpp file(s)
+-> Found 0 .o file(s)
+-> Found 0 .a file(s)
+-> Found 558 .h file(s)
+-> Found 0 .hpp file(s)
+-> Found 0 resource file(s)
+Applying filters...
+Auto-discovery complete
+
+Constructing build rules...
+Build rules construction complete
+
+==============================================================================
+= Building application =
+==============================================================================
+Generating compilation database file...
+-> ./build/compile_commands.json
+Compilation database file generation complete
+Building 178 file(s)
+==============================================================================
+= Build complete =
+==============================================================================
+
+Calculating memory consumption: CYBLE-416045-02 GCC_ARM -Og
+
+   ---------------------------------------------------- 
+  | Section Name         |  Address      |  Size       | 
+   ---------------------------------------------------- 
+  | .cy_m0p_image        |  0x10000000   |  6420       | 
+  | .text                |  0x10002000   |  36744      | 
+  | .ARM.exidx           |  0x1000af88   |  8          | 
+  | .copy.table          |  0x1000af90   |  24         | 
+  | .zero.table          |  0x1000afa8   |  8          | 
+  | .data                |  0x0800228c   |  1508       | 
+  | .cy_sharedmem        |  0x08002870   |  12         | 
+  | .noinit              |  0x08002880   |  148        | 
+  | .bss                 |  0x08002914   |  972        | 
+  | .heap                |  0x08002ce0   |  277280     | 
+   ---------------------------------------------------- 
+
+  Total Internal Flash (Available)          1048576    
+  Total Internal Flash (Utilized)           46504      
+
+  Total Internal SRAM (Available)           292864     
+  Total Internal SRAM (Utilized with heap)  279920     
+
+  
+
+10:50:30 Build Finished. 0 errors, 0 warnings. (took 2s.69ms)
+

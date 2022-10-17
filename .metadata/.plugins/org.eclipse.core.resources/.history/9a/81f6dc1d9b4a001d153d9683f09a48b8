@@ -1,0 +1,10 @@
+#ifndef __NETIF_NRWLANIF_H__
+#define __NETIF_NRWLANIF_H__
+
+#include "../../../../../../../../../../../../../ArduinoCore_avr_master/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/err.h"
+#include "../../../../../../../../../../../../../ArduinoCore_avr_master/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/SERVICES/LWIP/lwip-1.3.2/src/include/lwip/netif.h"
+
+err_t wlif_init(struct netif *netif);
+void wlif_poll(struct netif *netif);
+
+#endif
