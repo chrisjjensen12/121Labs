@@ -47,141 +47,69 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-void showUsage(void);
-void getUserInput(void);
-void handleCharacterInput(char c);
-//flags
-int displayOnOffFlag;
-int blinkingOnOffFlag;
-int cursorOnOffFlag;
+#define BUTTON_PORT GPIO_PRT0
+#define BUTTON_PORT_NUM 0U
+#define BUTTON_NUM 4U
+void button_on_handler(void);
+void updateRGBvalues(void);
+void printRGBvlauesToScreen(void);
+
+int RGBflag;
+char Rbuf[16];
+char Gbuf[16];
+char Bbuf[16];
+uint16_t red = 0;
+uint16_t green = 0;
+uint16_t blue = 0;
 
 
-void showUsage(void){
-	printf("\r\n");
-	printf("Usage: \r\n'o': Switch Display On/Off\r\n'b': Switch Blinking On/Off\r\n");
-	printf("'c': Switch Cursor On/Off\r\n'm': Move Cursor\r\n'l': Scroll Left\r\n");
-	printf("'r': Scroll Right\r\n'W': Set Color White\r\n'R': Set Color Red\r\n'Y': Set Color Yellow\r\n");
-	printf("'G': Set Color Green\r\n'B': Set Color Blue\r\n'P': Set Custom Color Pink\r\n'O': Set Custom Color Orange\r\n");
-	printf("'h' Show Usage\r\n");
-	printf("\r\n");
-}
+const cy_stc_sysint_t intrCfg =
+{
+	.intrSrc = ioss_interrupts_gpio_0_IRQn,
+	.intrPriority = 0UL
+};
 
-void getUserInput(void){
-
-	 char c;
-
-	 setvbuf(stdin, NULL, _IONBF, 0);
-
-	 c = getchar();
-
-	 printf("You Entered: %c\r\n", c);
-
-	 handleCharacterInput(c);
-
-}
-
-void handleCharacterInput(char c){
-
-	switch(c){
-
-		case 'o':
-			if(displayOnOffFlag == 1){
-				printf("Turning display off...\r\n");
-				LCD_Display(Off);
-				displayOnOffFlag = 0;
-			}else{
-				printf("Turning display on...\r\n");
-				LCD_Display(On);
-				displayOnOffFlag = 1;
-			}
-			break;
-
-		case 'b':
-			if(blinkingOnOffFlag == 1){
-				printf("Stop Blinking...\r\n");
-				LCD_Blink(Off);
-				blinkingOnOffFlag = 0;
-			}else{
-				printf("Start Blinking...\r\n");
-				LCD_Blink(On);
-				blinkingOnOffFlag = 1;
-			}
-			break;
-
-		case 'c':
-			if(cursorOnOffFlag == 1){
-				printf("Stop Cursor...\r\n");
-				LCD_Cursor(Off);
-				cursorOnOffFlag = 0;
-			}else{
-				printf("Start Cursor...\r\n");
-				LCD_Cursor(On);
-				cursorOnOffFlag = 1;
-			}
-			break;
-
-		case 'm':
-			if(cursorOnOffFlag == 1){
-				printf("Cursor Move...\r\n");
-				LCD_SetCursor(0, 1);
-			}else{
-				printf("Cursor not on (press c), doing nothing...\r\n");
-			}
-			break;
-
-		case 'd':
-			printf("Cursor Move Right...\r\n");
-			LCD_Scroll(Right);
-			break;
-
-		case 'l':
-			printf("Scroll Left...\r\n");
-			LCD_Scroll(Left);
-			break;
-
-		case 'r':
-			printf("Scroll Right...\r\n");
-			LCD_Scroll(Right);
-			break;
-
-		case 'h':
-			showUsage();
-			break;
-
-		case 'W':
-			printf("Setting Color White...\r\n");
-			LCD_SetColor(White);
-			break;
-		case 'R':
-			printf("Setting Color Red...\r\n");
-			LCD_SetColor(Red);
-			break;
-		case 'G':
-			printf("Setting Color Green...\r\n");
-			LCD_SetColor(Green);
-			break;
-		case 'B':
-			printf("Setting Color Blue...\r\n");
-			LCD_SetColor(Blue);
-			break;
-		case 'P':
-			printf("Setting Color Pink...\r\n");
-			LCD_SetRGB(255, 0, 255);
-			break;
-		case 'O':
-			printf("Setting Color Orange...\r\n");
-			LCD_SetRGB(255, 87, 51);
-			break;
-		case 'Y':
-			printf("Setting Color Yellow...\r\n");
-			LCD_SetRGB(250, 255, 51);
-			break;
-
+void button_on_handler(void)
+{
+	if(RGBflag == 1){
+		printf("Switching to GREEN\r\n");
+		RGBflag = 2;
+	}else if(RGBflag == 2){
+		printf("Switching to BLUE\r\n");
+		RGBflag = 3;
+	}else if(RGBflag == 3){
+		printf("Switching to RED\r\n");
+		RGBflag = 1;
 	}
 
-
+	Cy_GPIO_ClearInterrupt(BUTTON_PORT, BUTTON_NUM);
+    NVIC_ClearPendingIRQ(intrCfg.intrSrc);
 
 }
+
+void updateRGBvalues(void){
+
+	if(RGBflag == 1){
+		LCD_SetCursor(0, 1);
+		sprintf(Rbuf, "%u", red++);
+		LCD_Print(Rbuf);
+	}else if(RGBflag == 2){
+		LCD_SetCursor(5, 1);
+		sprintf(Gbuf, "%u", green++);
+		LCD_Print(Gbuf);
+	}else if(RGBflag == 3){
+		LCD_SetCursor(12, 1);
+		sprintf(Bbuf, "%u", blue++);
+		LCD_Print(Bbuf);
+	}
+
+}
+
+void printRGBvlauesToScreen(void){
+
+}
+
+
 
 
 int main(void)
@@ -207,43 +135,40 @@ int main(void)
 
 	printf("\x1b[2J\x1b[;H");
 
-	printf("Lab 3.2\r\n\n");
+	printf("Lab 3.3\r\n\n");
 
     __enable_irq();
 
+    /* Initialize the interrupt with vector at Interrupt_Handler*/
+	Cy_SysInt_Init(&intrCfg, &button_on_handler);
 
-////////////  appendix 2 stuff inside of main, comment back in if demo person wants it /////////////////
-//	printf("CSE121 Lab 3.2 DFR0554 Library\r\n");
-//	LCD_Start();
-//	LCD_SetColor(Blue);
-//	LCD_Print("Hello CSE121");
-//	LCD_SetRGB(52, 152, 219);
+	Cy_GPIO_SetInterruptMask(BUTTON_PORT, BUTTON_PORT_NUM, 1UL);
+	//clear pending IRQ
+	NVIC_ClearPendingIRQ(intrCfg.intrSrc);
+	/* Enable the interrupt */
+	NVIC_EnableIRQ(intrCfg.intrSrc);
+
+
+    //init LCD
+    LCD_Start();
+
+    //init RGBflag to 1
+    RGBflag = 1;
+
+
+    LCD_Print("RED  GREEN  BLUE");
+    LCD_Cursor(On);
+
 //	char buf[16];
 //	uint16_t cnt = 0;
-//
-//    for (;;)
-//    {
-//        LCD_SetCursor(0, 1);
-//        sprintf(buf, "%u", cnt++);
-//        LCD_Print(buf);
-//        CyDelay(1000);
-//    }
-//////////////////////////////////////////////////////////
-
-
-    LCD_Start();
-    LCD_SetColor(Blue);
-    LCD_Print("CSE121 Lab 3.2");
-    showUsage();
-
-    //set initial flags:
-    displayOnOffFlag = 1;
-    blinkingOnOffFlag = 0;
-    cursorOnOffFlag = 0;
+//	LCD_SetCursor(0, 1);
+//	sprintf(buf, "%u", cnt++);
+//	LCD_Print(buf);
+//	CyDelay(1000);
 
     for (;;)
 	{
-    	getUserInput();
+//    	updateRGBvalues();
 	}
 
 

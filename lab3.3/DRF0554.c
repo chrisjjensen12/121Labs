@@ -197,10 +197,6 @@ bool LCD_Clear(){
 bool LCD_Print(char *str){
 	uint8_t size = strlen(str);
 
-	if(strlen(str) > 16){
-		LCD_Autoscroll(On);
-	}
-
 	for(int i = 0; i < size; i++){
 		LCD_write(str[i]);
 	}
