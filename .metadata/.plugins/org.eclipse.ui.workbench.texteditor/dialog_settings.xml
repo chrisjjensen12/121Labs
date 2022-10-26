@@ -6,8 +6,12 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="send_byteS"/>
+		<item key="selection" value="all"/>
 		<list key="findhistory">
+			<item value="printf(&quot;dist in mm = %lu\r\n&quot;, mm);"/>
+			<item value="all"/>
+			<item value="target"/>
+			<item value="init"/>
 			<item value="send_byteS"/>
 			<item value="write"/>
 			<item value="i2c_send_byteS"/>
@@ -23,8 +27,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1299"/>
-		<item key="DIALOG_Y_ORIGIN" value="152"/>
+		<item key="DIALOG_X_ORIGIN" value="923"/>
+		<item key="DIALOG_Y_ORIGIN" value="137"/>
 		<item key="DIALOG_WIDTH" value="292"/>
 		<item key="DIALOG_HEIGHT" value="402"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>

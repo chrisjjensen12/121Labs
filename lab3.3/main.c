@@ -50,17 +50,19 @@
 #define BUTTON_PORT GPIO_PRT0
 #define BUTTON_PORT_NUM 0U
 #define BUTTON_NUM 4U
+#define ADC_HW SAR
 void button_on_handler(void);
-void updateRGBvalues(void);
-void printRGBvlauesToScreen(void);
+void updateRGBvalues(int16_t result);
+void getPotentiometerValues(void);
+int16_t fixADCresult(int16_t ADCresult);
 
 int RGBflag;
 char Rbuf[16];
 char Gbuf[16];
 char Bbuf[16];
-uint16_t red = 0;
-uint16_t green = 0;
-uint16_t blue = 0;
+uint16_t red;
+uint16_t green;
+uint16_t blue;
 
 
 const cy_stc_sysint_t intrCfg =
@@ -87,28 +89,70 @@ void button_on_handler(void)
 
 }
 
-void updateRGBvalues(void){
+void getPotentiometerValues(void){
+
+	uint16_t chan = 0UL;
+	int16_t ADCresult;
+	int16_t result;
+
+	CyDelay(100);
+	ADCresult = Cy_SAR_GetResult16(SAR, chan);
+	result = fixADCresult(ADCresult);
+//	printf("%d\r\n", result);
+
+	//update the RGB values
+	updateRGBvalues(result);
+}
+
+int16_t fixADCresult(int16_t ADCresult){
+	int16_t result = 0;
+	ADCresult = ADCresult/8; //set divider so that max pot value is 255
+
+
+	if(ADCresult > 255){
+		result = 255;
+	}else if(ADCresult < 0){
+		result = 0;
+	}else{
+		result = ADCresult;
+	}
+
+	return result;
+}
+
+
+void updateRGBvalues(int16_t result){
+
+	//convert int to string
+	char mystr[100];
+
+	if(result < 100){
+		sprintf(mystr, "0%u", result);
+	}else{
+		sprintf(mystr, "%u", result);
+	}
 
 	if(RGBflag == 1){
 		LCD_SetCursor(0, 1);
-		sprintf(Rbuf, "%u", red++);
-		LCD_Print(Rbuf);
+		LCD_Print(mystr);
+		red = result;
+		printf("Setting RGB to (%d, %d, %d)\r\n", red, green, blue);
+		LCD_SetRGB(red, green, blue);
 	}else if(RGBflag == 2){
 		LCD_SetCursor(5, 1);
-		sprintf(Gbuf, "%u", green++);
-		LCD_Print(Gbuf);
+		LCD_Print(mystr);
+		green = result;
+		printf("Setting RGB to (%d, %d, %d)\r\n", red, green, blue);
+		LCD_SetRGB(red, green, blue);
 	}else if(RGBflag == 3){
 		LCD_SetCursor(12, 1);
-		sprintf(Bbuf, "%u", blue++);
-		LCD_Print(Bbuf);
+		LCD_Print(mystr);
+		blue = result;
+		printf("Setting RGB to (%d, %d, %d)\r\n", red, green, blue);
+		LCD_SetRGB(red, green, blue);
 	}
 
 }
-
-void printRGBvlauesToScreen(void){
-
-}
-
 
 
 
@@ -139,6 +183,22 @@ int main(void)
 
     __enable_irq();
 
+
+    //initialize ADC
+    Cy_SysAnalog_Init(&Cy_SysAnalog_Fast_Local);
+
+    Cy_SysAnalog_Enable();
+
+    cy_en_sar_status_t SARstatus;
+	SARstatus = Cy_SAR_Init(SAR, &ADC_config);
+	if (CY_SAR_SUCCESS == SARstatus)
+	{
+		/* Turn on the SAR hardware. */
+		Cy_SAR_Enable(SAR);
+		/* Begin continuous conversions. */
+		Cy_SAR_StartConvert(SAR, CY_SAR_START_CONVERT_CONTINUOUS);
+	}
+
     /* Initialize the interrupt with vector at Interrupt_Handler*/
 	Cy_SysInt_Init(&intrCfg, &button_on_handler);
 
@@ -155,20 +215,25 @@ int main(void)
     //init RGBflag to 1
     RGBflag = 1;
 
-
     LCD_Print("RED  GREEN  BLUE");
-    LCD_Cursor(On);
 
-//	char buf[16];
-//	uint16_t cnt = 0;
-//	LCD_SetCursor(0, 1);
-//	sprintf(buf, "%u", cnt++);
-//	LCD_Print(buf);
-//	CyDelay(1000);
+    //init all RGB to 000
+    red = 0;
+	green = 0;
+	blue = 0;
+
+	LCD_SetCursor(0, 1);
+	LCD_Print("000");
+
+	LCD_SetCursor(5, 1);
+	LCD_Print("000");
+
+	LCD_SetCursor(12, 1);
+	LCD_Print("000");
 
     for (;;)
 	{
-//    	updateRGBvalues();
+    	getPotentiometerValues();
 	}
 
 

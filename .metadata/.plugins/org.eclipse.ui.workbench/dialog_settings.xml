@@ -10,6 +10,7 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/Users/chrisjensen/Desktop/fall22/cse121/labs/Lab3.zip"/>
 			<item value="/Users/chrisjensen/Desktop/Lab2.zip"/>
 			<item value="/Users/chrisjensen/Desktop/Lab1.zip"/>
 		</list>

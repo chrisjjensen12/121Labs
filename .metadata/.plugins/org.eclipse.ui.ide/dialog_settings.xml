@@ -45,4 +45,6 @@
 		<item value="org.eclipse.platform:4.17.0.v20200902-1800"/>
 		<item value="org.eclipse.rcp:4.17.0.v20200902-1800"/>
 	</list>
+	<section name="NewWizardAction">
+	</section>
 </section>
