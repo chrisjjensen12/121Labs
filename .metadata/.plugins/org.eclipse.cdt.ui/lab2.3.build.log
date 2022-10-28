@@ -1,8 +1,8 @@
-22:41:45 **** Build of configuration Debug for project lab2.3 ****
+17:14:52 **** Build of configuration Debug for project lab2.3 ****
 /Applications/ModusToolbox/tools_2.4/modus-shell/bin/make CY_MAKE_IDE=eclipse CY_MAKE_IDE_VERSION=2.4 CY_IDE_TOOLS_DIR=/Applications/ModusToolbox/tools_2.4 -j7 all 
 Tools Directory: /Applications/ModusToolbox/tools_2.4
 CY8CPROTO-063-BLE.mk: ./libs/TARGET_CY8CPROTO-063-BLE/CY8CPROTO-063-BLE.mk
-Log file= "/private/var/folders/1l/p85xtmg15clcrj5m1s3m5myr0000gn/T/device-configurator-cli/device-configurator-cli-20221017.224145.946-48115.log"
+Log file= "/private/var/folders/1l/p85xtmg15clcrj5m1s3m5myr0000gn/T/device-configurator-cli/device-configurator-cli-20221027.171452.672-18501.log"
 Command line= "/Applications/ModusToolbox/tools_2.4/device-configurator/device-configurator.app/Contents/MacOS/device-configurator-cli --library ../mtb_shared/mtb-pdl-cat1/release-v2.4.1/devicesupport.xml --build ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/design.modus --check-mcu=CYBLE-416045-02 --check-coprocessors= --readonly --skip-build"
 
 Prebuild operations complete
@@ -65,5 +65,5 @@ Calculating memory consumption: CYBLE-416045-02 GCC_ARM -Og
 
   
 
-22:41:47 Build Finished. 0 errors, 0 warnings. (took 2s.211ms)
+17:14:54 Build Finished. 0 errors, 0 warnings. (took 2s.355ms)
 

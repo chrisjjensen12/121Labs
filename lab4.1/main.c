@@ -55,6 +55,22 @@
 #define TIMER_NUM 0UL
 #define TIMER_MASK (1UL << 0)
 
+void printDistToLCD(int16_t result){
+
+	char mystr[100];
+
+	if(result < 10){
+		sprintf(mystr, "%u cm ", result);
+	}else{
+		sprintf(mystr, "%u cm", result);
+	}
+	LCD_SetCursor(0, 1);
+	LCD_Print(mystr);
+
+}
+
+
+
 int main(void)
 {
     cy_rslt_t result;
@@ -137,9 +153,11 @@ int main(void)
     	cm = mm/10;
     	inches = cm/2.54;
 //
-		printf("dist in mm = %lu, dist in cm = %lu, dist in inches = %lu\r\n\r\n", mm, cm, inches);
+//		printf("dist in mm = %lu, dist in cm = %lu, dist in inches = %lu\r\n\r\n", mm, cm, inches);
 
-    	CyDelay(1000);
+		printDistToLCD(cm);
+
+    	CyDelay(500);
 
 
 	}
