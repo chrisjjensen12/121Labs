@@ -168,7 +168,8 @@ int main(void)
 	/* Initialize the interrupt with vector at Interrupt_Handler*/
 	Cy_SysInt_Init(&intrCfg, &button_on_handler);
 
-	Cy_GPIO_SetInterruptMask(BUTTON_PORT, BUTTON_PORT_NUM, 1UL);
+	Cy_GPIO_SetInterruptMask(BUTTON_PORT, BUTTON_NUM, 1UL);
+
 	//clear pending IRQ
 	NVIC_ClearPendingIRQ(intrCfg.intrSrc);
 	/* Enable the interrupt */

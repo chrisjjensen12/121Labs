@@ -43,19 +43,10 @@
 #include "cyhal.h"
 #include "cybsp.h"
 #include "cy_retarget_io.h"
-
-
-void getUserInput(){
-
-	 char c;
-
-	 setvbuf(stdin, NULL, _IONBF, 0);
-
-	 c = getchar();
-
-	 printf("Character entered: %c\r\n", c);
-
-}
+#include "cy_ble.h"
+#include "cy_ble_hal_pvt.h"
+#include "cycfg_ble.h"
+#include "ble_findme.h"
 
 
 int main(void)
@@ -81,13 +72,17 @@ int main(void)
 
 	printf("\x1b[2J\x1b[;H");
 
-	printf("Lab 2.1\r\n\n");
+	printf("Lab 4.3\r\n\n");
 
     __enable_irq();
 
+    ble_findme_init();
+
     for (;;)
     {
-    	getUserInput();
+
+    	ble_findme_process();
+
     }
 }
 

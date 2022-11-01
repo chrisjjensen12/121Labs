@@ -8,4 +8,12 @@
 		<item key="size.width" value="401"/>
 		<item key="size.height" value="180"/>
 	</section>
+	<section name="PDOMSearchPage">
+		<item key="caseSensitive" value="false"/>
+		<item key="searchFlags" value="227191"/>
+		<list key="previousPatterns">
+			<item value="Cy_BLE_ProcessEvents"/>
+			<item value="cy_ble_stack"/>
+		</list>
+	</section>
 </section>
