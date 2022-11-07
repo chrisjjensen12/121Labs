@@ -47,6 +47,13 @@
 #include "cy_retarget_io.h"
 #include "cybsp.h"
 #include "cycfg_ble.h"
+#define TRIGGER_PORT GPIO_PRT9
+#define TRIGGER_NUM 2U
+#define ECHO_PORT GPIO_PRT9
+#define ECHO_NUM 3U
+#define TIMER_HW TCPWM0
+#define TIMER_NUM 0UL
+#define TIMER_MASK (1UL << 0)
 
 
 /*******************************************************************************
@@ -234,6 +241,20 @@ static void bless_interrupt_handler(void)
 *******************************************************************************/
 static void stack_event_handler(uint32_t event, void* eventParam)
 {
+
+    uint32_t pinState0 = 0UL;
+    uint32_t pinState1 = 1UL;
+    uint32_t duration = 0;
+    uint32_t mm = 0;
+    uint32_t cm = 0;
+    uint32_t inches = 0;
+
+    /*Structure used to load values to GATT database*/
+    cy_stc_ble_gatt_handle_value_pair_t	handleValuePair;
+
+    handleValuePair.attrHandle = CY_BLE_CUSTOM_SERVICE_DISTANCE_CHARACTERISTIC_CHAR_HANDLE;
+    handleValuePair.value.len = sizeof(uint8_t);
+
     switch(event)
     {
         /**********************************************************************
@@ -392,6 +413,45 @@ static void stack_event_handler(uint32_t event, void* eventParam)
         case CY_BLE_EVT_GATTS_READ_CHAR_VAL_ACCESS_REQ:
         {
             printf("[INFO] : GATT read characteristic request received \r\n");
+
+        	duration = 0;
+
+        	Cy_GPIO_Write(TRIGGER_PORT, TRIGGER_NUM, pinState0); //start trigger pin low
+        	CyDelayUs(2);
+        	Cy_GPIO_Write(TRIGGER_PORT, TRIGGER_NUM, pinState1); //set trigger pin to high
+        	CyDelayUs(10); //delay for 10 microseconds
+        	Cy_GPIO_Write(TRIGGER_PORT, TRIGGER_NUM, pinState0); //set trigger pin to low
+
+        	//When the echo pin goes high, start the timer
+        	while(Cy_GPIO_Read(ECHO_PORT, ECHO_NUM) == 0UL){ //stall until echo goes high
+    //    		printf("Stalling until echo goes high...\r\n");
+        	}
+
+        	//start counter
+        	Cy_TCPWM_TriggerStart(TIMER_HW, TIMER_MASK);
+
+        	while(Cy_GPIO_Read(ECHO_PORT, ECHO_NUM) == 1UL){ //stall until echo goes low
+    //    		printf("Stalling until echo goes low...\r\n");
+        	}
+
+        	duration = Cy_TCPWM_Counter_GetCounter(TIMER_HW, TIMER_NUM);
+
+        	//stop timer and reset its value to 0
+        	Cy_TCPWM_TriggerStopOrKill(TIMER_HW, TIMER_MASK);
+        	Cy_TCPWM_Counter_SetCounter(TIMER_HW, TIMER_NUM, 0);
+
+
+    //    	printf("Duration = %lu\r\n", duration);
+
+        	mm = (duration/2) * 0.0343;
+        	cm = mm/10;
+        	inches = cm/2.54;
+
+    		printf("dist in mm = %lu, dist in cm = %lu, dist in inches = %lu\r\n\r\n", mm, cm, inches);
+
+        	handleValuePair.value.val = (uint8_t*)&cm;
+
+        	Cy_BLE_GATTS_WriteAttributeValueLocal(&handleValuePair);
 
             break;
         }

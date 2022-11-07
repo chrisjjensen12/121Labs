@@ -4054,3 +4054,418 @@ java.io.IOException: Cannot run program "/undefined_path/JLinkGDBServerCLExe": U
 
 !ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-04 14:51:12.675
 !MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 19:58:54.696
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.2/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 20:00:50.308
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 20:02:23.505
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 20:25:11.929
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 20:36:39.960
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 20:48:16.424
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 20:51:49.997
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 20:53:04.666
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.2/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 20:54:57.754
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 20:58:09.134
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 20:59:00.335
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 21:00:37.193
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 21:01:21.400
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 21:02:08.613
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 21:03:00.682
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 21:05:28.326
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY org.eclipse.ui.workbench.texteditor 4 0 2022-11-06 21:13:40.335
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.texteditor.AbstractTextEditor$TextEditorSavable.isDirty(AbstractTextEditor.java:7165)
+	at org.eclipse.ui.internal.Workbench.getFilteredSaveables(Workbench.java:3447)
+	at org.eclipse.ui.internal.Workbench.saveAll(Workbench.java:3420)
+	at org.eclipse.ui.ide.IDE$1.run(IDE.java:1494)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.ide.IDE.saveAllEditors(IDE.java:1482)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.doSave(SaveScopeResourcesHandler.java:228)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.handleStatus(SaveScopeResourcesHandler.java:182)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.lambda$0(Prompter.java:73)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4124)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3791)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:153)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 21:13:45.603
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 21:17:32.166
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 21:18:09.183
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 21:21:40.565
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 21:25:49.814
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.jlink 4 1 2022-11-06 21:26:30.751
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+!SESSION 2022-11-07 09:46:01.508 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.9.1
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/chrisjensen/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/chrisjensen/.eclipse_keyring
+
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2022-11-07 09:46:02.435
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.commons.notifications.feed [262]
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.mylyn.commons.notifications.feed [osgi.identity; type="osgi.bundle"; version:Version="1.17.2.v20200813-0821"; osgi.identity="org.eclipse.mylyn.commons.notifications.feed"; singleton:="true"] because it is exposed to package 'javax.xml.bind' from resources javax.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.2.0.v201105210648"; osgi.identity="javax.xml.bind"] and jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20201118-1818"; osgi.identity="jakarta.xml.bind"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.mylyn.commons.notifications.feed [osgi.identity; type="osgi.bundle"; version:Version="1.17.2.v20200813-0821"; osgi.identity="org.eclipse.mylyn.commons.notifications.feed"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=javax.xml.bind)(bundle-version>=2.2.0))
+     |
+    provide: osgi.wiring.bundle: javax.xml.bind
+  javax.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.2.0.v201105210648"; osgi.identity="javax.xml.bind"]
+
+Chain 2:
+  org.eclipse.mylyn.commons.notifications.feed [osgi.identity; type="osgi.bundle"; version:Version="1.17.2.v20200813-0821"; osgi.identity="org.eclipse.mylyn.commons.notifications.feed"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=com.sun.xml.bind)(bundle-version>=2.2.0))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.3.3.v20201118-1818"; osgi.wiring.bundle="com.sun.xml.bind"
+  com.sun.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20201118-1818"; osgi.identity="com.sun.xml.bind"]
+    import: (&(osgi.wiring.package=javax.xml.bind)(&(version>=2.3.3)(!(version>=2.3.4))))
+     |
+    export: osgi.wiring.package: javax.xml.bind
+  jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20201118-1818"; osgi.identity="jakarta.xml.bind"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.mylyn.tasks.ui 4 0 2022-11-07 09:46:02.441
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.tasks.ui [279]
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.notifications.feed; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.commons.notifications.feed; bundle-version="1.17.2.v20200813-0821"; singleton:="true"
+       org.eclipse.mylyn.commons.notifications.feed [262]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.mylyn.commons.notifications.feed [osgi.identity; type="osgi.bundle"; version:Version="1.17.2.v20200813-0821"; osgi.identity="org.eclipse.mylyn.commons.notifications.feed"; singleton:="true"] because it is exposed to package 'javax.xml.bind' from resources javax.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.2.0.v201105210648"; osgi.identity="javax.xml.bind"] and jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20201118-1818"; osgi.identity="jakarta.xml.bind"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.mylyn.commons.notifications.feed [osgi.identity; type="osgi.bundle"; version:Version="1.17.2.v20200813-0821"; osgi.identity="org.eclipse.mylyn.commons.notifications.feed"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=javax.xml.bind)(bundle-version>=2.2.0))
+     |
+    provide: osgi.wiring.bundle: javax.xml.bind
+  javax.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.2.0.v201105210648"; osgi.identity="javax.xml.bind"]
+
+Chain 2:
+  org.eclipse.mylyn.commons.notifications.feed [osgi.identity; type="osgi.bundle"; version:Version="1.17.2.v20200813-0821"; osgi.identity="org.eclipse.mylyn.commons.notifications.feed"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=com.sun.xml.bind)(bundle-version>=2.2.0))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.3.3.v20201118-1818"; osgi.wiring.bundle="com.sun.xml.bind"
+  com.sun.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20201118-1818"; osgi.identity="com.sun.xml.bind"]
+    import: (&(osgi.wiring.package=javax.xml.bind)(&(version>=2.3.3)(!(version>=2.3.4))))
+     |
+    export: osgi.wiring.package: javax.xml.bind
+  jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20201118-1818"; osgi.identity="jakarta.xml.bind"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.mylyn.wikitext.tasks.ui 4 0 2022-11-07 09:46:02.447
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.wikitext.tasks.ui [294]
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.tasks.ui; bundle-version="3.7.0"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.tasks.ui; bundle-version="3.25.2.v20200814-0512"; singleton:="true"
+       org.eclipse.mylyn.tasks.ui [279]
+         Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.notifications.feed; bundle-version="1.0.0"
+           -> Bundle-SymbolicName: org.eclipse.mylyn.commons.notifications.feed; bundle-version="1.17.2.v20200813-0821"; singleton:="true"
+              org.eclipse.mylyn.commons.notifications.feed [262]
+                No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.mylyn.commons.notifications.feed [osgi.identity; type="osgi.bundle"; version:Version="1.17.2.v20200813-0821"; osgi.identity="org.eclipse.mylyn.commons.notifications.feed"; singleton:="true"] because it is exposed to package 'javax.xml.bind' from resources javax.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.2.0.v201105210648"; osgi.identity="javax.xml.bind"] and jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20201118-1818"; osgi.identity="jakarta.xml.bind"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.mylyn.commons.notifications.feed [osgi.identity; type="osgi.bundle"; version:Version="1.17.2.v20200813-0821"; osgi.identity="org.eclipse.mylyn.commons.notifications.feed"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=javax.xml.bind)(bundle-version>=2.2.0))
+     |
+    provide: osgi.wiring.bundle: javax.xml.bind
+  javax.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.2.0.v201105210648"; osgi.identity="javax.xml.bind"]
+
+Chain 2:
+  org.eclipse.mylyn.commons.notifications.feed [osgi.identity; type="osgi.bundle"; version:Version="1.17.2.v20200813-0821"; osgi.identity="org.eclipse.mylyn.commons.notifications.feed"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=com.sun.xml.bind)(bundle-version>=2.2.0))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.3.3.v20201118-1818"; osgi.wiring.bundle="com.sun.xml.bind"
+  com.sun.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20201118-1818"; osgi.identity="com.sun.xml.bind"]
+    import: (&(osgi.wiring.package=javax.xml.bind)(&(version>=2.3.3)(!(version>=2.3.4))))
+     |
+    export: osgi.wiring.package: javax.xml.bind
+  jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20201118-1818"; osgi.identity="jakarta.xml.bind"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+!SESSION 2022-11-07 09:57:25.245 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.9.1
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/chrisjensen/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/chrisjensen/.eclipse_keyring
+
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2022-11-07 09:57:26.297
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.commons.notifications.feed [262]
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.mylyn.commons.notifications.feed [osgi.identity; type="osgi.bundle"; version:Version="1.17.2.v20200813-0821"; osgi.identity="org.eclipse.mylyn.commons.notifications.feed"; singleton:="true"] because it is exposed to package 'javax.xml.bind' from resources javax.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.2.0.v201105210648"; osgi.identity="javax.xml.bind"] and jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20201118-1818"; osgi.identity="jakarta.xml.bind"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.mylyn.commons.notifications.feed [osgi.identity; type="osgi.bundle"; version:Version="1.17.2.v20200813-0821"; osgi.identity="org.eclipse.mylyn.commons.notifications.feed"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=javax.xml.bind)(bundle-version>=2.2.0))
+     |
+    provide: osgi.wiring.bundle: javax.xml.bind
+  javax.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.2.0.v201105210648"; osgi.identity="javax.xml.bind"]
+
+Chain 2:
+  org.eclipse.mylyn.commons.notifications.feed [osgi.identity; type="osgi.bundle"; version:Version="1.17.2.v20200813-0821"; osgi.identity="org.eclipse.mylyn.commons.notifications.feed"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=com.sun.xml.bind)(bundle-version>=2.2.0))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.3.3.v20201118-1818"; osgi.wiring.bundle="com.sun.xml.bind"
+  com.sun.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20201118-1818"; osgi.identity="com.sun.xml.bind"]
+    import: (&(osgi.wiring.package=javax.xml.bind)(&(version>=2.3.3)(!(version>=2.3.4))))
+     |
+    export: osgi.wiring.package: javax.xml.bind
+  jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20201118-1818"; osgi.identity="jakarta.xml.bind"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.mylyn.tasks.ui 4 0 2022-11-07 09:57:26.300
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.tasks.ui [279]
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.notifications.feed; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.commons.notifications.feed; bundle-version="1.17.2.v20200813-0821"; singleton:="true"
+       org.eclipse.mylyn.commons.notifications.feed [262]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.mylyn.commons.notifications.feed [osgi.identity; type="osgi.bundle"; version:Version="1.17.2.v20200813-0821"; osgi.identity="org.eclipse.mylyn.commons.notifications.feed"; singleton:="true"] because it is exposed to package 'javax.xml.bind' from resources javax.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.2.0.v201105210648"; osgi.identity="javax.xml.bind"] and jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20201118-1818"; osgi.identity="jakarta.xml.bind"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.mylyn.commons.notifications.feed [osgi.identity; type="osgi.bundle"; version:Version="1.17.2.v20200813-0821"; osgi.identity="org.eclipse.mylyn.commons.notifications.feed"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=javax.xml.bind)(bundle-version>=2.2.0))
+     |
+    provide: osgi.wiring.bundle: javax.xml.bind
+  javax.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.2.0.v201105210648"; osgi.identity="javax.xml.bind"]
+
+Chain 2:
+  org.eclipse.mylyn.commons.notifications.feed [osgi.identity; type="osgi.bundle"; version:Version="1.17.2.v20200813-0821"; osgi.identity="org.eclipse.mylyn.commons.notifications.feed"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=com.sun.xml.bind)(bundle-version>=2.2.0))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.3.3.v20201118-1818"; osgi.wiring.bundle="com.sun.xml.bind"
+  com.sun.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20201118-1818"; osgi.identity="com.sun.xml.bind"]
+    import: (&(osgi.wiring.package=javax.xml.bind)(&(version>=2.3.3)(!(version>=2.3.4))))
+     |
+    export: osgi.wiring.package: javax.xml.bind
+  jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20201118-1818"; osgi.identity="jakarta.xml.bind"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.mylyn.wikitext.tasks.ui 4 0 2022-11-07 09:57:26.301
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.wikitext.tasks.ui [294]
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.tasks.ui; bundle-version="3.7.0"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.tasks.ui; bundle-version="3.25.2.v20200814-0512"; singleton:="true"
+       org.eclipse.mylyn.tasks.ui [279]
+         Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.notifications.feed; bundle-version="1.0.0"
+           -> Bundle-SymbolicName: org.eclipse.mylyn.commons.notifications.feed; bundle-version="1.17.2.v20200813-0821"; singleton:="true"
+              org.eclipse.mylyn.commons.notifications.feed [262]
+                No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.mylyn.commons.notifications.feed [osgi.identity; type="osgi.bundle"; version:Version="1.17.2.v20200813-0821"; osgi.identity="org.eclipse.mylyn.commons.notifications.feed"; singleton:="true"] because it is exposed to package 'javax.xml.bind' from resources javax.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.2.0.v201105210648"; osgi.identity="javax.xml.bind"] and jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20201118-1818"; osgi.identity="jakarta.xml.bind"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.mylyn.commons.notifications.feed [osgi.identity; type="osgi.bundle"; version:Version="1.17.2.v20200813-0821"; osgi.identity="org.eclipse.mylyn.commons.notifications.feed"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=javax.xml.bind)(bundle-version>=2.2.0))
+     |
+    provide: osgi.wiring.bundle: javax.xml.bind
+  javax.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.2.0.v201105210648"; osgi.identity="javax.xml.bind"]
+
+Chain 2:
+  org.eclipse.mylyn.commons.notifications.feed [osgi.identity; type="osgi.bundle"; version:Version="1.17.2.v20200813-0821"; osgi.identity="org.eclipse.mylyn.commons.notifications.feed"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=com.sun.xml.bind)(bundle-version>=2.2.0))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.3.3.v20201118-1818"; osgi.wiring.bundle="com.sun.xml.bind"
+  com.sun.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20201118-1818"; osgi.identity="com.sun.xml.bind"]
+    import: (&(osgi.wiring.package=javax.xml.bind)(&(version>=2.3.3)(!(version>=2.3.4))))
+     |
+    export: osgi.wiring.package: javax.xml.bind
+  jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20201118-1818"; osgi.identity="jakarta.xml.bind"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 09:58:16.705
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 09:58:36.963
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 10:09:10.466
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 10:10:02.662
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 10:13:09.637
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 10:17:22.928
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 10:23:01.486
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 10:24:22.597
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 10:26:13.178
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 10:27:06.197
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 10:27:38.701
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 10:27:54.285
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 10:28:27.848
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 10:28:50.254
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 10:30:21.530
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 10:30:46.754
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 10:34:40.813
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 10:35:30.882
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 10:37:08.192
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 10:38:26.845
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 10:43:08.030
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"
+
+!ENTRY ilg.gnumcueclipse.debug.gdbjtag.openocd 4 1 2022-11-07 10:46:22.298
+!MESSAGE /Applications/ModusToolbox/tools_2.4/openocd/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -c tcl_port 6666 -s /Applications/ModusToolbox/tools_2.4/openocd/bin/../scripts -s ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/GeneratedSource -c source [find interface/kitprog3.cfg] -c source [find target/psoc6.cfg] -c psoc6 sflash_restrictions 1 -c if [catch {program /Users/chrisjensen/mtw/lab4.4/build/CY8CPROTO-063-BLE/Debug/mtb-example-psoc6-empty-app.hex} ] { echo {** Program operation failed **} } else { echo {** Program operation completed successfully **} } -c reset_config srst_only;reset run;psoc6.dap dpreg 0x04 0x00;shutdown -c echo "Started by GNU MCU Eclipse"

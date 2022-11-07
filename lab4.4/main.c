@@ -47,47 +47,17 @@
 #include "cy_ble_hal_pvt.h"
 #include "cycfg_ble.h"
 #include "ble_findme.h"
-#define BUTTON_PORT GPIO_PRT0
-#define BUTTON_NUM 4U
-void button_on_handler(void);
+#define TRIGGER_PORT GPIO_PRT9
+#define TRIGGER_NUM 2U
+#define ECHO_PORT GPIO_PRT9
+#define ECHO_NUM 3U
+#define TIMER_HW TCPWM0
+#define TIMER_NUM 0UL
+#define TIMER_MASK (1UL << 0)
 #define CY_BLE_CUSTOM_SERVICE_DISTANCE_CHARACTERISTIC_CHAR_HANDLE   (0x0009u)
 
 cy_stc_ble_conn_handle_t app_conn_handle1;
 
-const cy_stc_sysint_t intrCfg =
-{
-	.intrSrc = ioss_interrupts_gpio_0_IRQn,
-	.intrPriority = 0UL
-};
-
-//cy_stc_ble_gatt_handle_value_pair_t val_pair = {
-//    .value = {NULL, 0, 0},
-//    .attrHandle = CY_BLE_CUSTOM_SERVICE_DISTANCE_CHARACTERISTIC_CHAR_HANDLE
-//};
-
-
-void button_on_handler(void)
-{
-	printf("button handler!\r\n");
-
-
-	if(CY_BLE_CONN_STATE_CONNECTED == Cy_BLE_GetConnectionState(app_conn_handle1)){
-		printf("connected to device\r\n");
-	}else{
-		printf("not connected to device\r\n");
-	}
-
-    /*Structure used to load values to GATT database*/
-    cy_stc_ble_gatt_handle_value_pair_t	handleValuePair;
-
-    handleValuePair.attrHandle = CY_BLE_CUSTOM_SERVICE_DISTANCE_CHARACTERISTIC_CHAR_HANDLE;
-    handleValuePair.value.val = (uint8*)15;
-    handleValuePair.value.len = sizeof(uint8_t);
-    Cy_BLE_GATTS_WriteAttributeValueLocal(&handleValuePair);
-
-	Cy_GPIO_ClearInterrupt(BUTTON_PORT, BUTTON_NUM);
-    NVIC_ClearPendingIRQ(intrCfg.intrSrc);
-}
 
 int main(void)
 {
@@ -110,15 +80,12 @@ int main(void)
 		 CY_ASSERT(0);
 	 }
 
-	/* Initialize the interrupt with vector at Interrupt_Handler*/
-	Cy_SysInt_Init(&intrCfg, &button_on_handler);
+	Cy_GPIO_Pin_Init(TRIGGER_PORT, TRIGGER_NUM, &TRIGGER_config);
+	Cy_GPIO_Pin_Init(ECHO_PORT, ECHO_NUM, &ECHO_config);
 
-	Cy_GPIO_SetInterruptMask(BUTTON_PORT, BUTTON_PORT_NUM, 1UL);
-	//clear pending IRQ
-	NVIC_ClearPendingIRQ(intrCfg.intrSrc);
-	/* Enable the interrupt */
-	NVIC_EnableIRQ(intrCfg.intrSrc);
-
+	Cy_TCPWM_Counter_Init(TIMER_HW, TIMER_NUM, &TIMER_config);
+	/* Enable the initialized counter */
+	Cy_TCPWM_Counter_Enable(TIMER_HW, TIMER_NUM);
 
 	printf("\x1b[2J\x1b[;H");
 
@@ -127,23 +94,12 @@ int main(void)
     __enable_irq();
 
     ble_findme_init();
-    /*Structure used to load values to GATT database*/
-    cy_stc_ble_gatt_handle_value_pair_t	handleValuePair;
-
-    uint8_t var = 67;
-
-    handleValuePair.attrHandle = CY_BLE_CUSTOM_SERVICE_DISTANCE_CHARACTERISTIC_CHAR_HANDLE;
-    handleValuePair.value.len = sizeof(uint8_t);
 
 
     for (;;)
     {
 
     	Cy_BLE_ProcessEvents();
-
-    	handleValuePair.value.val = (uint8_t*)&var;
-
-    	Cy_BLE_GATTS_WriteAttributeValueLocal(&handleValuePair);
 
     }
 }
