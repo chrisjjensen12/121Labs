@@ -8,7 +8,7 @@ Successfully acquired the information.
 Summary: 
 
 BSP: CY8CPROTO-063-BLE
-Template Application(s): Empty App
+Template Application(s): Bluetooth LE Battery Level FreeRTOS
 Application(s) Root Path: /Users/chrisjensen/mtw
 
 Press "Create" to create the selected application(s).
@@ -16,25 +16,23 @@ Collecting application data...
 
 
 Info: The following entered on the command line will create the exact same project as that created with the GUI tool:
-/Applications/ModusToolbox/tools_2.4/project-creator/project-creator-cli --board-id CY8CPROTO-063-BLE --board-uri https://github.com/cypresssemiconductorco/TARGET_CY8CPROTO-063-BLE --board-commit latest-v3.X --app-id mtb-example-empty-app --app-uri https://github.com/Infineon/mtb-example-empty-app --app-commit latest-v3.X --cypress-tools /Applications/ModusToolbox/tools_2.4 --target-dir /Users/chrisjensen/mtw --user-app-name Test --output-for-machine --use-modus-shell
+/Applications/ModusToolbox/tools_2.4/project-creator/project-creator-cli --board-id CY8CPROTO-063-BLE --board-uri https://github.com/cypresssemiconductorco/TARGET_CY8CPROTO-063-BLE --board-commit latest-v1.X --app-id mtb-example-psoc6-ble-battery-level-freertos-0 --app-uri https://github.com/cypresssemiconductorco/mtb-example-psoc6-ble-battery-level-freertos --app-commit latest-v1.X --cypress-tools /Applications/ModusToolbox/tools_2.4 --target-dir /Users/chrisjensen/mtw --user-app-name Bluetooth_LE_Battery_Level_FreeRTOS --output-for-machine --use-modus-shell
 
 
 ==============================================================================
-= Cloning 'mtb-example-empty-app' =
+= Cloning 'mtb-example-psoc6-ble-battery-level-freertos-0' =
 ==============================================================================
-Cloning https://github.com/Infineon/mtb-example-empty-app into /Users/chrisjensen/mtw directory...
-env git clone --progress --origin cypress https://github.com/Infineon/mtb-example-empty-app Test
-Cloning into 'Test'...
-remote: Enumerating objects: 53, done.        
-remote: Counting objects: 100% (22/22), done.        
-remote: Compressing objects: 100% (16/16), done.        
-remote: Total 53 (delta 12), reused 10 (delta 6), pack-reused 31        
-Receiving objects: 100% (53/53), 86.33 KiB | 71.00 KiB/s, done.
-Resolving deltas: 100% (21/21), done.
+Cloning https://github.com/cypresssemiconductorco/mtb-example-psoc6-ble-battery-level-freertos into /Users/chrisjensen/mtw directory...
+env git clone --progress --origin cypress https://github.com/cypresssemiconductorco/mtb-example-psoc6-ble-battery-level-freertos Bluetooth_LE_Battery_Level_FreeRTOS
+Cloning into 'Bluetooth_LE_Battery_Level_FreeRTOS'...
+remote: Enumerating objects: 60, done.        
+remote: Total 60 (delta 0), reused 0 (delta 0), pack-reused 60        
+Receiving objects: 100% (60/60), 790.38 KiB | 4.97 MiB/s, done.
+Resolving deltas: 100% (22/22), done.
 
-Checking out latest-v3.X...
-env git checkout --progress latest-v3.X
-Note: switching to 'latest-v3.X'.
+Checking out latest-v1.X...
+env git checkout --progress latest-v1.X
+Note: switching to 'latest-v1.X'.
 
 You are in 'detached HEAD' state. You can look around, make experimental
 changes and commit them, and you can discard any commits you make in this
@@ -51,75 +49,68 @@ Or undo this operation with:
 
 Turn off this advice by setting config variable advice.detachedHead to false
 
-HEAD is now at a9e053c Upload mtb-example-psoc6-empty-app 3.0.0.181
+HEAD is now at f838a7f Upload mtb-example-psoc6-ble-battery-level-freertos 1.2.0.82
 
 ==============================================================================
-= Creating "TARGET_CY8CPROTO-063-BLE.mtb" file(s) =
+= Creating "TARGET_CY8CPROTO-063-BLE.lib" file(s) =
 ==============================================================================
-/Users/chrisjensen/mtw/Test/deps/TARGET_CY8CPROTO-063-BLE.mtb was added
-/Users/chrisjensen/mtw/Test/deps/TARGET_CY8CPROTO-062-4343W.mtb was removed
+/Users/chrisjensen/mtw/Bluetooth_LE_Battery_Level_FreeRTOS/deps/TARGET_CY8CPROTO-063-BLE.lib was added
+/Users/chrisjensen/mtw/Bluetooth_LE_Battery_Level_FreeRTOS/deps/TARGET_CY8CKIT-062-BLE.lib was removed
+Tried to remove the /Users/chrisjensen/mtw/Bluetooth_LE_Battery_Level_FreeRTOS/TARGET_CY8CKIT-062-BLE but it doesn't exist.
 
 ==============================================================================
-= Updating Makefile for "Test" =
+= Updating Makefile for "Bluetooth_LE_Battery_Level_FreeRTOS" =
 ==============================================================================
 
 ==============================================================================
-= Applying the Latest Version Locking for "Test" =
+= Applying the Latest Version Locking for "Bluetooth_LE_Battery_Level_FreeRTOS" =
 ==============================================================================
-/Users/chrisjensen/mtw/Test/deps/TARGET_CY8CPROTO-063-BLE.mtb was updated
+/Users/chrisjensen/mtw/Bluetooth_LE_Battery_Level_FreeRTOS/deps/TARGET_CY8CPROTO-063-BLE.lib was updated
+/Users/chrisjensen/mtw/Bluetooth_LE_Battery_Level_FreeRTOS/deps/bless.lib was updated
+/Users/chrisjensen/mtw/Bluetooth_LE_Battery_Level_FreeRTOS/deps/retarget-io.lib was updated
 
 ==============================================================================
-= Getting Dependencies for "Test" =
+= Getting Dependencies for "Bluetooth_LE_Battery_Level_FreeRTOS" =
 ==============================================================================
 make getlibs CY_TOOLS_PATHS=/Applications/ModusToolbox/tools_2.4
 Tools Directory: /Applications/ModusToolbox/tools_2.4
+INFO: The path 'libs/psoc6make' set for CY_BASELIB_PATH does not exist. Attempting to use BSP provided path instead
 
 ==============================================================================
 = Importing libraries =
 ==============================================================================
 Git is git version 2.32.1 (Apple Git-133), found at /usr/bin/git
 
-Resolving dependencies...
-Checking if remote manifest is accessible...
-Getting manifests from remote server...
-Processing super-manifest https://github.com/cypresssemiconductorco/mtb-super-manifest/raw/v2.X/mtb-super-manifest-fv2.xml...
-One or more elements/attributes was ignored from manifest https://github.com/Infineon/mtb-mw-manifest/raw/v2.X/mtb-mw-manifest-fv2.xml. Run using the --verbose flag for additional details.
-Successfully acquired the information.
-INFO - Warning: Multiple versions of "core-make" requested. Keeping version "latest-v1.X" and discarding version "release-v1.9.0".
-/Users/chrisjensen/mtw/Test/libs/core-lib.mtb was added
-/Users/chrisjensen/mtw/Test/libs/core-make.mtb was added
-/Users/chrisjensen/mtw/Test/libs/mtb-hal-cat1.mtb was added
-/Users/chrisjensen/mtw/Test/libs/mtb-pdl-cat1.mtb was added
-/Users/chrisjensen/mtw/Test/libs/psoc6cm0p.mtb was added
-/Users/chrisjensen/mtw/Test/libs/recipe-make-cat1a.mtb was added
-Dependencies resolved.
+Searching application directory (.lib)...
+Found 4 .lib file(s)
+    Processing file "/Users/chrisjensen/mtw/Bluetooth_LE_Battery_Level_FreeRTOS/deps/TARGET_CY8CPROTO-063-BLE.lib"
+    Processing file "/Users/chrisjensen/mtw/Bluetooth_LE_Battery_Level_FreeRTOS/deps/bless.lib"
+    Processing file "/Users/chrisjensen/mtw/Bluetooth_LE_Battery_Level_FreeRTOS/deps/freertos.lib"
+    Processing file "/Users/chrisjensen/mtw/Bluetooth_LE_Battery_Level_FreeRTOS/deps/retarget-io.lib"
+Application directory search complete.
 
-Searching application directory (.mtb)...
-Found 7 .mtb file(s)
-    Processing file "/Users/chrisjensen/mtw/Test/deps/TARGET_CY8CPROTO-063-BLE.mtb"
-    Processing file "/Users/chrisjensen/mtw/Test/libs/core-lib.mtb"
-    Processing file "/Users/chrisjensen/mtw/Test/libs/core-make.mtb"
-    Processing file "/Users/chrisjensen/mtw/Test/libs/mtb-hal-cat1.mtb"
-    Processing file "/Users/chrisjensen/mtw/Test/libs/mtb-pdl-cat1.mtb"
-    Processing file "/Users/chrisjensen/mtw/Test/libs/psoc6cm0p.mtb"
-    Processing file "/Users/chrisjensen/mtw/Test/libs/recipe-make-cat1a.mtb"
-Libraries processed.
-Created file "/Users/chrisjensen/mtw/Test/libs/mtb.mk".
-
+Searching "libs" directory (.lib)...
+Found 5 .lib file(s)
+    Processing file "/Users/chrisjensen/mtw/Bluetooth_LE_Battery_Level_FreeRTOS/libs/TARGET_CY8CPROTO-063-BLE/libs/core-lib.lib"
+    Processing file "/Users/chrisjensen/mtw/Bluetooth_LE_Battery_Level_FreeRTOS/libs/TARGET_CY8CPROTO-063-BLE/libs/psoc6cm0p.lib"
+    Processing file "/Users/chrisjensen/mtw/Bluetooth_LE_Battery_Level_FreeRTOS/libs/TARGET_CY8CPROTO-063-BLE/libs/psoc6hal.lib"
+    Processing file "/Users/chrisjensen/mtw/Bluetooth_LE_Battery_Level_FreeRTOS/libs/TARGET_CY8CPROTO-063-BLE/libs/psoc6make.lib"
+    Processing file "/Users/chrisjensen/mtw/Bluetooth_LE_Battery_Level_FreeRTOS/libs/TARGET_CY8CPROTO-063-BLE/libs/psoc6pdl.lib"
+Libraries were processed. Re-evaluating "libs" directory...
+Found 5 .lib file(s)
+"libs" directory search complete.
 
 ==============================================================================
 = Import complete =
 ==============================================================================
 
-Project "Test" created successfully.
+Project "Bluetooth_LE_Battery_Level_FreeRTOS" created successfully.
 ==============================================================================
-= Export "Test" application to Eclipse IDE for ModusToolbox™ =
+= Export "Bluetooth_LE_Battery_Level_FreeRTOS" application to Eclipse IDE for ModusToolbox™ =
 ==============================================================================
-make eclipse CY_IDE_PRJNAME=Test CY_MAKE_IDE=eclipse CY_MAKE_IDE_VERSION=2.4 CY_TOOLS_PATHS=/Applications/ModusToolbox/tools_2.4
+make eclipse CY_IDE_PRJNAME=Bluetooth_LE_Battery_Level_FreeRTOS CY_MAKE_IDE=eclipse CY_MAKE_IDE_VERSION=2.4 CY_TOOLS_PATHS=/Applications/ModusToolbox/tools_2.4
 Tools Directory: /Applications/ModusToolbox/tools_2.4
 CY8CPROTO-063-BLE.mk: ./libs/TARGET_CY8CPROTO-063-BLE/CY8CPROTO-063-BLE.mk
-Log file= "/private/var/folders/1l/p85xtmg15clcrj5m1s3m5myr0000gn/T/device-configurator-cli/device-configurator-cli-20221017.222621.537-43506.log"
-Command line= "/Applications/ModusToolbox/tools_2.4/device-configurator/device-configurator.app/Contents/MacOS/device-configurator-cli --library ../mtb_shared/mtb-pdl-cat1/release-v2.4.1/devicesupport.xml --build ./libs/TARGET_CY8CPROTO-063-BLE/COMPONENT_BSP_DESIGN_MODUS/design.modus --check-mcu=CYBLE-416045-02 --check-coprocessors= --readonly --skip-build"
 
 Prebuild operations complete
 Commencing build operations...
@@ -127,16 +118,16 @@ Commencing build operations...
 Tools Directory: /Applications/ModusToolbox/tools_2.4
 CY8CPROTO-063-BLE.mk: ./libs/TARGET_CY8CPROTO-063-BLE/CY8CPROTO-063-BLE.mk
 
-Initializing build: mtb-example-psoc6-empty-app Debug CY8CPROTO-063-BLE GCC_ARM
+Initializing build: mtb-example-psoc6-ble-battery-level-freertos Debug CY8CPROTO-063-BLE GCC_ARM
 
 Auto-discovery in progress...
--> Found 208 .c file(s)
+-> Found 226 .c file(s)
 -> Found 46 .S file(s)
--> Found 22 .s file(s)
+-> Found 23 .s file(s)
 -> Found 0 .cpp file(s)
 -> Found 0 .o file(s)
--> Found 0 .a file(s)
--> Found 562 .h file(s)
+-> Found 26 .a file(s)
+-> Found 517 .h file(s)
 -> Found 0 .hpp file(s)
 -> Found 0 resource file(s)
 Applying filters...
@@ -149,8 +140,8 @@ Build rules construction complete
 = Generating IDE files =
 ==============================================================================
 
-Generated Eclipse launch config files:  "Test Attach (JLink).launch" "Test Attach (KitProg3_MiniProg4).launch" "Test Debug (JLink).launch" "Test Debug (KitProg3_MiniProg4).launch" "Test Erase (JLink).launch" "Test Erase (KitProg3_MiniProg4).launch" "Test Program (JLink).launch" "Test Program (KitProg3_MiniProg4).launch"
+Generated Eclipse launch config files:  "Bluetooth_LE_Battery_Level_FreeRTOS Attach (JLink).launch" "Bluetooth_LE_Battery_Level_FreeRTOS Attach (KitProg3_MiniProg4).launch" "Bluetooth_LE_Battery_Level_FreeRTOS Debug (JLink).launch" "Bluetooth_LE_Battery_Level_FreeRTOS Debug (KitProg3_MiniProg4).launch" "Bluetooth_LE_Battery_Level_FreeRTOS Erase (JLink).launch" "Bluetooth_LE_Battery_Level_FreeRTOS Erase (KitProg3_MiniProg4).launch" "Bluetooth_LE_Battery_Level_FreeRTOS Program (JLink).launch" "Bluetooth_LE_Battery_Level_FreeRTOS Program (KitProg3_MiniProg4).launch"
   
-The project "Test" was successfully exported to Eclipse IDE for ModusToolbox™.
+The project "Bluetooth_LE_Battery_Level_FreeRTOS" was successfully exported to Eclipse IDE for ModusToolbox™.
 
-Successfully created and exported "Test" application.
+Successfully created and exported "Bluetooth_LE_Battery_Level_FreeRTOS" application.

@@ -6,30 +6,30 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="components"/>
+		<item key="selection" value="CHAR_HANDLE"/>
 		<list key="findhistory">
-			<item value="components"/>
-			<item value="bless"/>
-			<item value="#ifdef CY_PSOC_CREATOR_USED&#x0A;#include &quot;syslib/cy_syslib.h&quot;&#x0A;#else&#x0A;#include &quot;cy_syslib.h&quot;&#x0A;#endif /* CY_PSOC_CREATOR_USED */"/>
-			<item value="Cy_BLE_ProcessEvents"/>
-			<item value="cy_retarget_io.h"/>
-			<item value="printf(&quot;dist in mm = %lu\r\n&quot;, mm);"/>
-			<item value="all"/>
-			<item value="target"/>
-			<item value="init"/>
-			<item value="send_byteS"/>
-			<item value="write"/>
-			<item value="i2c_send_byteS"/>
-			<item value="setreg"/>
-			<item value="setrgb"/>
-			<item value="rgb"/>
+			<item value="char_handle"/>
+			<item value="charhandle"/>
+			<item value="xqueuesend"/>
+			<item value="xqueue"/>
+			<item value="eventparam"/>
+			<item value="cy_ble_gatt_db_attr_handle_t"/>
+			<item value="handle"/>
+			<item value="Cy_BLE_GetConnectionState"/>
+			<item value="Cy_BLE_GetAdvertisementState"/>
+			<item value="getconnec"/>
+			<item value="gatt"/>
+			<item value="bless_interrupt_handler"/>
+			<item value="Cy_BLE_BlessIsrHandler"/>
+			<item value="ble_ias_callback"/>
+			<item value="Cy_BLE_Enable"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1229"/>
-		<item key="DIALOG_Y_ORIGIN" value="132"/>
+		<item key="DIALOG_X_ORIGIN" value="1276"/>
+		<item key="DIALOG_Y_ORIGIN" value="155"/>
 		<item key="DIALOG_WIDTH" value="292"/>
 		<item key="DIALOG_HEIGHT" value="402"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>

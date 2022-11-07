@@ -116,7 +116,7 @@ void ble_findme_process(void)
     /* Enter low power mode. The call to enter_low_power_mode also causes the
      * device to enter hibernate mode if the BLE stack is shutdown.
      */
-//    enter_low_power_mode();
+    enter_low_power_mode();
 
     /* Cy_BLE_ProcessEvents() allows the BLE stack to process pending events */
     Cy_BLE_ProcessEvents();
@@ -392,6 +392,7 @@ static void stack_event_handler(uint32_t event, void* eventParam)
         case CY_BLE_EVT_GATTS_READ_CHAR_VAL_ACCESS_REQ:
         {
             printf("[INFO] : GATT read characteristic request received \r\n");
+
             break;
         }
 

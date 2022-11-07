@@ -16,4 +16,7 @@
 			<item value="cy_ble_stack"/>
 		</list>
 	</section>
+	<section name="CResourceRenameRefactoringInputPage">
+		<item key="updateReferences" value="true"/>
+	</section>
 </section>

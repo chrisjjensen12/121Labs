@@ -50,6 +50,9 @@
 #define BUTTON_PORT GPIO_PRT0
 #define BUTTON_NUM 4U
 void button_on_handler(void);
+#define CY_BLE_CUSTOM_SERVICE_DISTANCE_CHARACTERISTIC_CHAR_HANDLE   (0x0009u)
+
+cy_stc_ble_conn_handle_t app_conn_handle1;
 
 const cy_stc_sysint_t intrCfg =
 {
@@ -57,11 +60,30 @@ const cy_stc_sysint_t intrCfg =
 	.intrPriority = 0UL
 };
 
+//cy_stc_ble_gatt_handle_value_pair_t val_pair = {
+//    .value = {NULL, 0, 0},
+//    .attrHandle = CY_BLE_CUSTOM_SERVICE_DISTANCE_CHARACTERISTIC_CHAR_HANDLE
+//};
 
 
 void button_on_handler(void)
 {
 	printf("button handler!\r\n");
+
+
+	if(CY_BLE_CONN_STATE_CONNECTED == Cy_BLE_GetConnectionState(app_conn_handle1)){
+		printf("connected to device\r\n");
+	}else{
+		printf("not connected to device\r\n");
+	}
+
+    /*Structure used to load values to GATT database*/
+    cy_stc_ble_gatt_handle_value_pair_t	handleValuePair;
+
+    handleValuePair.attrHandle = CY_BLE_CUSTOM_SERVICE_DISTANCE_CHARACTERISTIC_CHAR_HANDLE;
+    handleValuePair.value.val = (uint8*)15;
+    handleValuePair.value.len = sizeof(uint8_t);
+    Cy_BLE_GATTS_WriteAttributeValueLocal(&handleValuePair);
 
 	Cy_GPIO_ClearInterrupt(BUTTON_PORT, BUTTON_NUM);
     NVIC_ClearPendingIRQ(intrCfg.intrSrc);
@@ -105,12 +127,23 @@ int main(void)
     __enable_irq();
 
     ble_findme_init();
+    /*Structure used to load values to GATT database*/
+    cy_stc_ble_gatt_handle_value_pair_t	handleValuePair;
+
+    uint8_t var = 67;
+
+    handleValuePair.attrHandle = CY_BLE_CUSTOM_SERVICE_DISTANCE_CHARACTERISTIC_CHAR_HANDLE;
+    handleValuePair.value.len = sizeof(uint8_t);
 
 
     for (;;)
     {
 
-    	ble_findme_process();
+    	Cy_BLE_ProcessEvents();
+
+    	handleValuePair.value.val = (uint8_t*)&var;
+
+    	Cy_BLE_GATTS_WriteAttributeValueLocal(&handleValuePair);
 
     }
 }

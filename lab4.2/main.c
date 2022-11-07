@@ -54,7 +54,7 @@
 #define TIMER_HW TCPWM0
 #define TIMER_NUM 0UL
 #define TIMER_MASK (1UL << 0)
-void button_on_handler(void);
+void echo_on_handler(void);
 void printDistToLCD(int16_t result);
 
 void printDistToLCD(int16_t result){
@@ -72,70 +72,54 @@ void printDistToLCD(int16_t result){
 
 const cy_stc_sysint_t intrCfg =
 {
-	.intrSrc = ioss_interrupts_gpio_0_IRQn,
+	.intrSrc = ioss_interrupts_gpio_9_IRQn,
 	.intrPriority = 0UL
 };
 
 
 
-void button_on_handler(void)
+void echo_on_handler(void)
 {
-	printf("button handler!\r\n");
-
-    uint32_t pinState0 = 0UL;
-    uint32_t pinState1 = 1UL;
     uint32_t duration = 0;
     uint32_t mm = 0;
     uint32_t cm = 0;
 //    uint32_t inches = 0;
+    uint32_t pinState0 = 0UL;
+    uint32_t pinState1 = 1UL;
 
+    Cy_TCPWM_TriggerStart(TIMER_HW, TIMER_MASK);
 
-	for(int i = 0; i < 5; i++){ //mimic distance sensor loop, just to calibrate sensor
+    while(Cy_GPIO_Read(ECHO_PORT, ECHO_NUM) == 1UL){ //stall until echo goes low
+    //    		printf("Stalling until echo goes low...\r\n");
+    }
 
-    	duration = 0;
+    duration = Cy_TCPWM_Counter_GetCounter(TIMER_HW, TIMER_NUM);
 
-    	Cy_GPIO_Write(TRIGGER_PORT, TRIGGER_NUM, pinState0); //start trigger pin low
-    	CyDelayUs(2);
-    	Cy_GPIO_Write(TRIGGER_PORT, TRIGGER_NUM, pinState1); //set trigger pin to high
-    	CyDelayUs(10); //delay for 10 microseconds
-    	Cy_GPIO_Write(TRIGGER_PORT, TRIGGER_NUM, pinState0); //set trigger pin to low
+	//stop timer and reset its value to 0
+	Cy_TCPWM_TriggerStopOrKill(TIMER_HW, TIMER_MASK);
+	Cy_TCPWM_Counter_SetCounter(TIMER_HW, TIMER_NUM, 0);
 
-    	//When the echo pin goes high, start the timer
-    	while(Cy_GPIO_Read(ECHO_PORT, ECHO_NUM) == 0UL){ //stall until echo goes high
-//    		printf("Stalling until echo goes high...\r\n");
-    	}
+//	printf("Duration = %lu\r\n", duration);
 
-    	//start counter
-    	Cy_TCPWM_TriggerStart(TIMER_HW, TIMER_MASK);
+	mm = (duration/2) * 0.0343;
+	cm = mm/10;
+//	inches = cm/2.54;
 
-    	while(Cy_GPIO_Read(ECHO_PORT, ECHO_NUM) == 1UL){ //stall until echo goes low
-//    		printf("Stalling until echo goes low...\r\n");
-    	}
+//	printf("dist in mm = %lu, dist in cm = %lu, dist in inches = %lu\r\n\r\n", mm, cm, inches);
 
-    	duration = Cy_TCPWM_Counter_GetCounter(TIMER_HW, TIMER_NUM);
-
-    	//stop timer and reset its value to 0
-    	Cy_TCPWM_TriggerStopOrKill(TIMER_HW, TIMER_MASK);
-    	Cy_TCPWM_Counter_SetCounter(TIMER_HW, TIMER_NUM, 0);
-
-
-//    	printf("Duration = %lu\r\n", duration);
-
-    	mm = (duration/2) * 0.0343;
-    	cm = mm/10;
-//    	inches = cm/2.54;
-//
-//		printf("dist in mm = %lu, dist in cm = %lu, dist in inches = %lu\r\n\r\n", mm, cm, inches);
-
-    	if(i == 4){
-    		printDistToLCD(cm);
-    	}
-
-    	CyDelay(10);
-
+	if(cm < 30){
+		printDistToLCD(cm);
 	}
 
-	Cy_GPIO_ClearInterrupt(BUTTON_PORT, BUTTON_NUM);
+	CyDelay(100);
+
+	Cy_GPIO_Write(TRIGGER_PORT, TRIGGER_NUM, pinState0); //start trigger pin low
+	CyDelayUs(2);
+	Cy_GPIO_Write(TRIGGER_PORT, TRIGGER_NUM, pinState1); //set trigger pin to high
+	CyDelayUs(10); //delay for 10 microseconds
+	Cy_GPIO_Write(TRIGGER_PORT, TRIGGER_NUM, pinState0); //set trigger pin to low
+
+	Cy_GPIO_ClearInterrupt(ECHO_PORT, ECHO_NUM);
     NVIC_ClearPendingIRQ(intrCfg.intrSrc);
 
 }
@@ -162,40 +146,36 @@ int main(void)
 		 CY_ASSERT(0);
 	 }
 
+	printf("\x1b[2J\x1b[;H");
+
+	printf("Lab 4.2\r\n\n");
+
+	__enable_irq();
+
+	//init LCD
+	LCD_Start();
+
+	LCD_Print("CSE121 Lab 4.2");
+
+    Cy_TCPWM_Counter_Init(TIMER_HW, TIMER_NUM, &TIMER_config);
+    /* Enable the initialized counter */
+    Cy_TCPWM_Counter_Enable(TIMER_HW, TIMER_NUM);
+
 	Cy_GPIO_Pin_Init(TRIGGER_PORT, TRIGGER_NUM, &TRIGGER_config);
 	Cy_GPIO_Pin_Init(ECHO_PORT, ECHO_NUM, &ECHO_config);
 
 	/* Initialize the interrupt with vector at Interrupt_Handler*/
-	Cy_SysInt_Init(&intrCfg, &button_on_handler);
+	Cy_SysInt_Init(&intrCfg, &echo_on_handler);
 
-	Cy_GPIO_SetInterruptMask(BUTTON_PORT, BUTTON_NUM, 1UL);
+	Cy_GPIO_SetInterruptMask(ECHO_PORT, ECHO_NUM, 1UL);
 
 	//clear pending IRQ
 	NVIC_ClearPendingIRQ(intrCfg.intrSrc);
 	/* Enable the interrupt */
 	NVIC_EnableIRQ(intrCfg.intrSrc);
 
-
-	printf("\x1b[2J\x1b[;H");
-
-	printf("Lab 4.2\r\n\n");
-
-    __enable_irq();
-
-    Cy_TCPWM_Counter_Init(TIMER_HW, TIMER_NUM, &TIMER_config);
-    /* Enable the initialized counter */
-    Cy_TCPWM_Counter_Enable(TIMER_HW, TIMER_NUM);
-
-
-    //init LCD
-    LCD_Start();
-
-    LCD_Print("CSE121 Lab 4.2");
-
-
     for (;;)
 	{
-
 
 	}
 
